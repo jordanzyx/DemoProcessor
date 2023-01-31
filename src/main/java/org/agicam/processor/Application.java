@@ -19,13 +19,17 @@ public class Application {
 
         File image = new File("./NDVI_Image.png");
         List<Plot> plots = new ArrayList<>();
+
         Plot inWheat = new Plot(56, 164, 73, 179);
         Plot inLane = new Plot(261 , 321, 62, 177);
+        Plot dark = new Plot(615 , 612, 5, 12);
+        Plot bigPlot = new Plot(413, 535, 53, 256);
 
         plots.add(inWheat);
         plots.add(inLane);
+        plots.add(dark);
+        plots.add(bigPlot);
 
-        double score = processor.calculateNDVI(image, plots);
         NDVIProcessor ndviProcessor = new NDVIProcessor();
         ndviProcessor.calculateNDVI(image, plots);
     }
