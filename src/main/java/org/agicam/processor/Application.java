@@ -17,7 +17,7 @@ public class Application {
 
         Processor processor = new Processor();
 
-        File image = new File("./NDVI_Image.png");
+        File image = new File("./sensorNDVI.png");
         List<Plot> plots = new ArrayList<>();
 
         Plot inWheat = new Plot(56, 164, 73, 179);
@@ -25,10 +25,20 @@ public class Application {
         Plot dark = new Plot(615 , 612, 5, 12);
         Plot bigPlot = new Plot(413, 535, 53, 256);
 
-        plots.add(inWheat);
-        plots.add(inLane);
-        plots.add(dark);
-        plots.add(bigPlot);
+        // Plots for sensor image
+        Plot healthiest = new Plot(1953, 2079, 282 ,339 );
+        Plot healthy = new Plot(1495, 1857, 569, 933 );
+        Plot unhealthy = new Plot(2033, 2297, 511, 865 );
+        Plot road = new Plot(1939, 2015, 1118,1220 );
+
+//        plots.add(inWheat);
+//        plots.add(inLane);
+//        plots.add(dark);
+//        plots.add(bigPlot);
+        plots.add(healthiest);
+        plots.add(healthy);
+        plots.add(unhealthy);
+        plots.add(road);
 
         NDVIProcessor ndviProcessor = new NDVIProcessor();
         ndviProcessor.calculateNDVI(image, plots);

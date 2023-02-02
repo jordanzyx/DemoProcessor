@@ -59,10 +59,10 @@ public class NDVIProcessor {
             double min = stats.min;
 
             System.out.println("Plot Mean {" + i + "} = " + mean);
-            System.out.println("Plot Median {" + i + "} = " + median);
-
-            System.out.println("Plot Max {" + i + "} = " + max);
-            System.out.println("Plot Min {" + i + "} = " + min);
+//            System.out.println("Plot Median {" + i + "} = " + median);
+//
+//            System.out.println("Plot Max {" + i + "} = " + max);
+//            System.out.println("Plot Min {" + i + "} = " + min);
         }
     }
 }
